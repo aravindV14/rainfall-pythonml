@@ -3,12 +3,12 @@
 a python machine learning  project
 we created this project by using the simple python packages
 
-tkinter for widgets
-seaborn for visualization
-sklearn for machine learning algorithms
-imutils for paths
-numpy and pandas to take csv
-matplotlib for differnt kinds of graphs
+tkinter for widgets <br>
+seaborn for visualization <br>
+sklearn for machine learning algorithms <br>
+imutils for paths <br>
+numpy and pandas to take csv <br>
+matplotlib for differnt kinds of graphs <br>
 
 
 
