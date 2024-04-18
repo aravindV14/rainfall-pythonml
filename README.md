@@ -1,6 +1,16 @@
 # rainfall-pythonml
 
 a python machine learning  project
+we created this project by using the simple python packages
+
+tkinter for widgets
+seaborn for visualization
+sklearn for machine learning algorithms
+imutils for paths
+numpy and pandas to take csv
+matplotlib for differnt kinds of graphs
+
+
 
 In this project Dogecoin price prediction and prediction, we use three approaches:
  1. Linear regression 
