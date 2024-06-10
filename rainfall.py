@@ -45,8 +45,10 @@ def csv():
             df =pd.read_parquet(filename)
         elif filename.endswith('.feather'):
             df =pd.read_feather(filename)
-    except FileNotFoundException:
-        print("unsupported file format try using .csv,.feathers.xml.json.parquet")
+         else:
+            raise ValueError("Unsupported file format")
+    except ValueError as e:
+        tkinter.messagebox.showwarning(title="Unsupported file", message="Use file with extensions .ctsv, .json, .feather, .parquet, .xls, .xlsx")
         
             
     text.insert(END,"Top Five rows of dataset\n"+str(df.head())+"\n")
