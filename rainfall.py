@@ -32,7 +32,23 @@ def upload():
 def csv():
     global df
     text.delete('1.0', END)
-    df=pd.read_csv(filename)
+    try:
+        if filename.endswith('.csv'):
+            df=pd.read_csv(filename)
+        elif filename.endswith('.json'):
+            df =pd.read_json(filename)
+        elif filename.endswith('.xls'):
+            df =pd.read_excel(filename)
+        elif filename.endswith('.xlsx'):
+            df =pd.read_excel(filename)
+        elif filename.endswith('.parquet'):
+            df =pd.read_parquet(filename)
+        elif filename.endswith('.feather'):
+            df =pd.read_feather(filename)
+    except FileNotFoundException:
+        print("unsupported file format try using .csv,.feathers.xml.json.parquet")
+        
+            
     text.insert(END,"Top Five rows of dataset\n"+str(df.head())+"\n")
     text.insert(END,"Last Five rows of dataset\n"+str(df.tail())+"\n")
     text.insert(END,"Data columns information: \n"+str(df.columns)+"\n")
